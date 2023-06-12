@@ -1,0 +1,9 @@
+body {
+background-color: rgb(132, 63, 153);
+opacity: .75;
+}
+
+img {
+    height: 300px;
+    width: 80%;
+}

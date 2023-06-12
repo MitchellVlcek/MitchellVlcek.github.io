@@ -1,9 +1,10 @@
 body {
 background-color: rgb(132, 63, 153);
 opacity: .75;
+font-family: 'Noto Sans'; font-size: 22px;
 }
 
 img {
     height: 300px;
-    width: 80%;
+    width: 240px;
 }

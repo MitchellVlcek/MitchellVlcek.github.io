@@ -1,0 +1,345 @@
+/*
+    Student Name: Mitchell Vlcek
+    File Name: styles.css
+    Date: 09/22/2024
+*/
+
+/* CSS Reset */
+
+body, header, nav, main, footer, img, h1, h2, h3, h4, h5, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Header styles */
+
+header {
+    background: linear-gradient(to bottom, grey, #50479e);
+}
+header img {
+    max-width: 75%;
+    max-height: 100%;
+    transform: scale(.8);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Navbar styles */
+
+nav {
+    background-color: #50479e;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 1.2em;
+    font-family: Geneva, Arial, sans-serif;
+    font-weight: bold;
+}
+
+nav li a {
+    display: block;
+    color: #f6eee4;
+    padding: 0.2em .8em;
+    text-decoration: none;
+}
+
+/* Main content styles */
+
+main {
+    background-color: #a9c2d8;
+    padding: 1.5em;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: auto;
+}
+
+main #welcome {
+    font-weight: bold;
+    padding-bottom: 5%;
+}
+
+/* Top 5 section styles */
+
+.top5 img {
+    width: 150px;
+    height: 150px;
+}
+
+.top5 figure {
+    border: 4px solid #2a1f14;
+    box-shadow: 6px 6px 10px #50479e;
+    max-width: 150px;
+    margin: 2% auto;
+}
+
+.top5 figcaption {
+    padding: 2%;
+    border-top: 4px solid #2a1f14;
+    text-align: center;
+    font-weight: bold;
+}
+
+.top5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+/* Tier list styles */
+
+.tierlist table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tierlist td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+
+.tierlist img {
+    width: 100px;
+    height: 100px;
+    transform: scale(1.1);
+    display: block;
+    margin: auto;
+}
+
+
+/* Review section styles */
+
+.review {
+    margin-top: 5px;
+    display: block;
+    border: 2px solid grey;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.review img {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.review h1 {
+    size: 50%;
+}
+
+.review-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.review-header img {
+    max-width: 150px;
+    height: auto;
+}
+
+.review-header ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.review-header ul li {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+/* Footer styles */
+
+footer {
+    
+    font-size: .8em;
+    font-family: Geneva, Arial, sans-serif;
+    font-weight: bold;
+    background-color: #50479e;
+    color: #f6eee4;
+    padding-top: 1%;
+    padding-bottom: 3%;
+    padding-right: 0%;
+    padding-left: 0%;
+}
+
+footer p {
+    text-align: left;
+    color: #f3e6d8;
+    text-decoration: none;
+}
+
+footer a {
+    text-align: center;
+    color: #f3e6d8;
+    text-decoration: none;
+}
+
+footer img {
+    max-width: 7%;
+    max-height: 7%;
+    padding-left: 1.5em;
+    margin-right: 10px; 
+    vertical-align: middle;
+    display: flex; 
+    align-items: center;
+}
+
+footer #instagram img {
+    scale: 20%;
+    margin-left: -3.5%;
+    margin-right: -2%;
+    margin-top: -2%;
+    margin-bottom: -2%;
+}
+
+footer #contact {
+    background-color: #6b6658;
+    padding: 2%;
+    width: 80%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+/* Media Query for Mobile Viewport */
+@media screen and (max-width: 999px) {
+    /* Hide the desktop navigation */
+    nav {
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav li {
+        display: none;
+    }
+
+    /* Display mobile navigation and nav-icon elements */
+    .mobile-nav {
+        display: block;
+    }
+
+    .nav-icon {
+        display: block;
+        cursor: pointer;
+    }
+    
+    #nav-links {
+        display: none;
+        transition: all 0.3s ease;
+    }
+    
+}
+
+/* Media Query for Tablet Viewport */
+
+@media screen and (min-width: 620px), print {
+    
+    /* Tablet Viewport: Show tab-desk class, hide mobile class */
+
+    .tab-desk {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+    
+    /* Tablet Viewport: Style rules for nav area */
+
+    nav li {
+        border-top: 0;
+        display: inline-block;
+        size: 1.25em;
+    }
+
+    nav li a {
+        padding: .5em;
+    }
+
+    .mobile-nav a {
+        color: #fff;
+        text-align: center;
+        font-size: 2em;
+        text-decoration: none;
+        padding: 3%;
+        display: block;
+    }
+    
+    .mobile-nav a.nav-icon {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #f6eee4;
+        padding: 2%;
+    }
+    
+    .nav-icon div {
+        height: 40px;
+        width: 40px;
+        color: #2a1f14;
+    }
+}
+
+/* Media Query for Desktop Viewport */
+
+@media screen and (min-width: 1000px), print {
+    /* Ensure only the primary navigation is displayed */
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav li {
+        display: inline-block;
+        font-size: 1.5em;
+    }
+
+    nav li a {
+        padding-top: .5em;
+        padding-bottom: .5em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        color: #f6eee4;
+        text-decoration: none;
+    }
+
+    nav li a:hover {
+        color: #2a1f14;
+        background-color: #8b867f;
+    }
+
+    /* Hide the mobile navigation and nav-icon elements */
+    .mobile-nav {
+        display: none;
+    }
+
+    .nav-icon {
+        display: none;
+    }
+}
